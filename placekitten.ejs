@@ -1,0 +1,8 @@
+var ejs = require('ejs');
+var fs = require('fs');
+
+# read in our template file into a string
+var str = fs.readFileSync('/apple.ejs', 'utf8');
+var rendered = ejs.render(str, {applecount: 10});
+
+console.log(rendered);
